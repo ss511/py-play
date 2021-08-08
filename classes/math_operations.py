@@ -1,4 +1,5 @@
 import math
+import datetime
 
 """
 A sample class with various math operations. 
@@ -48,6 +49,7 @@ class MathOperations:
 
 
 if __name__ == "__main__":
+    print(datetime.datetime.now())
     a = int(input("Input a: "))
     b = int(input("Input b: "))
     math_operations = MathOperations(a, b)
