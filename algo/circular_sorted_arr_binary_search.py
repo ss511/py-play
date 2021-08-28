@@ -4,8 +4,6 @@ def search(arr, key):
         return False
 
     low, high = 0, n-1
-    # if low >= high:
-    #     return False
 
     mid = n//2
     if arr[mid] == key:
