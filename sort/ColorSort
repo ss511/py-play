@@ -1,0 +1,31 @@
+"""
+A program to sort colors denoted by number in an array.
+0 - Red
+1 - White
+2 - Blue
+Uses counting sort
+"""
+
+
+def color_sorting(colors):
+    count = [0, 0, 0]
+    for color in colors:
+        count[color] += 1
+
+    i = 0
+    j = 0
+
+    while i < len(colors):
+        if count[j] != 0:
+            colors[i] = j
+            count[j] -= 1
+            i += 1
+        else:
+            j += 1
+
+    return colors
+
+
+if __name__ == "__main__":
+    unsorted_colors = [1, 2, 0, 0, 1, 2, 2, 1, 0, 2]
+    print("Sorted color list: ", color_sorting(unsorted_colors))
